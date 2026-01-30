@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo de dado🎲</title>
+</head>
+<body>
+    <h1>Jogo de dado🎲</h1>
+    <p id="message">Você ainda não jogou</p>
+    <p>Para ganhar, você deve tirar 4 ou mais</p>
+    <button onclick="pointsVerify()">JOGAR</button>
+    <p id="pontos"></p>
+    <script>
+        function pointsVerify() {
+            let points = Math.floor(Math.random()*6);
+            points++;
+            if (points >=4) {
+                document.getElementById("message").innerText = "Você ganhou!";
+            }
+            else {
+                document.getElementById("message").innerText = "Você perdeu!";
+            }
+        console.log(points);
+        document.getElementById("pontos").innerText = points;
+        }
+    </script>
+</body>
+</html>
